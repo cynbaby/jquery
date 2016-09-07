@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>简单实现依赖于jQuery的多层多区域拖拽小插件</title>
+		<meta charset="utf-8"><meta>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="XQ_drag.js"></script>
+		<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			padding: 30px;
+			background-color:#E9E9E9
+		}
+		.drop{
+	width: 400px;
+	min-height: 200px;
+	display: block;
+	border: 1px solid #036BB5;
+	padding: 10px;
+		}
+		.drag{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	display: inline-block;
+	margin-right: 10px;			
+		}
+		.drag img{
+			width: 100%;
+			height: 100%;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="drop" xq_drop="true" style="background:#8CDDFF"></div>
+		<div class="drop" xq_drop="true" style="background:#2AC0FF">
+			<div class="drag" xq_drag="true" id="1">
+				<img  src="a1.png" ondragstart="return false"/>
+			</div>
+			<div class="drag" xq_drag="true" id="2">
+				<img  src="a2.png" ondragstart="return false"/>
+			</div>
+		</div>
+		<div class="drop" xq_drop="true" style="background:#2490E9">
+			<div class="drag" xq_drag="true" id="3">
+				<img  src="a3.png" ondragstart="return false"/>
+			</div>
+			<div class="drag" xq_drag="true" id="4">
+				<img  src="a4.png" ondragstart="return false"/>
+			</div>
+		</div>
+	</body>
+</html>
